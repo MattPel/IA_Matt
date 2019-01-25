@@ -40,7 +40,7 @@
 			
 			<form action="login.php" id="loginForm" method="post"> <br> <!-- Form used for login -->
 			  <div class="imgcontainer" style="text-align:center;">
-				<img src="Welcome_pic.jpg" alt="welcome" class="img-fluid">
+				<img src="IA_photos/Welcome_pic.jpg" alt="welcome" class="img-fluid">
 			  </div> 
 			  
 				<br>
@@ -80,7 +80,7 @@
 				<br>
 				
 				<div class="container" style="text-align:center;">
-				  <img id="GermanFlag1" class="img-fluid" src="GermanFlag.jpg" alt="image test"style="border-radius: 10%;"/>
+				  <img id="GermanFlag1" class="img-fluid" src="IA_photos/GermanFlag.jpg" alt="image test" style="border-radius: 10%;"/>
 				  
 				  <br><br><br>
 				  
