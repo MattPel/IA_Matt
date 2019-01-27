@@ -15,7 +15,7 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title> BME German students manager </title>
+		<title> German students manager </title>
 
 	</head>
 
@@ -36,7 +36,7 @@
 		
 		<div class="container-fluid" id="main">
 			
-			<h1 id="mytitle"> BME German students manager </h1> <!-- Present everywhere -->
+			<h1 id="mytitle"> German students manager </h1> <!-- Present everywhere -->
 			
 			<form action="login.php" id="loginForm" method="post"> <br> <!-- Form used for login -->
 			  <div class="imgcontainer" style="text-align:center;">
