@@ -20,46 +20,43 @@
 			
 			//the user's input is first checked in order to form the appropriate query
 			$sql = "SELECT * FROM students WHERE";
-			$name = htmlspecialchars($_POST['name']);
-			$year = htmlspecialchars($_POST['year']);
-			$schoolSystem = htmlspecialchars($_POST['SchoolSystem']);
-			if(!empty($name)) {
-				$sql = $sql . " (name LIKE '" . $name . "%' or name LIKE '% " . $name ."%')";
+			if(!empty($_POST['name'])) {
+				$sql = $sql . " (name LIKE '" . $_POST['name'] . "%' or name LIKE '% " . $_POST['name'] ."%')";
 			}
 			
-			if(!empty($year)){
-				if(!empty($name)) {
+			if(!empty($_POST['year'])){
+				if(!empty($_POST['name'])) {
 					$sql = $sql . " and";
 				}
-				$sql = $sql . " year = " . $year;
+				$sql = $sql . " year = " . $_POST['year'];
 			}
 			
-			if(!empty($schoolSystem)){
-				if(!empty($name) || !empty($year)) {
+			if(!empty($_POST['SchoolSystem'])){
+				if(!empty($_POST['name']) || !empty($_POST['year'])) {
 					$sql = $sql . " and";
 				}
 				
-				if ($schoolSystem=="Both"){
+				if ($_POST['SchoolSystem']=="Both"){
 					$sql = $sql . " (SchoolSystem = 'Hungarian' or SchoolSystem = 'IB')";
 				}	
 				
-				else if ($schoolSystem=="Hungarian System"){
+				else if ($_POST['SchoolSystem']=="Hungarian System"){
 					$sql = $sql . " (SchoolSystem = 'Hungarian')";
 				}
 				
 				else{
-					$sql = $sql . " SchoolSystem = '" . $schoolSystem . "'";
+					$sql = $sql . " SchoolSystem = '" . $_POST['SchoolSystem'] . "'";
 				}
 			}
 			
 			if(!empty($_POST['CourseLevel'])){	
-				$courseLevel = htmlspecialchars($_POST['CourseLevel']);
-				if ($courseLevel=="Both"){
+			
+				if ($_POST['CourseLevel']=="Both"){
 					$sql = $sql . " and (SchoolSystem = 'Hungarian' or SchoolSystem = 'IB')";
 				}
 				
 				else {
-					$sql = $sql . " and CourseLevel = '" . $courseLevel . "'";
+					$sql = $sql . " and CourseLevel = '" . $_POST['CourseLevel'] . "'";
 				}
 			}	
 			
@@ -120,17 +117,17 @@
 						}
 						
 						//we pass all the search inputs to the dynamically generated edit form in order to re-execute the search query and edit the appropriate student record
-						echo '<input name="name" style="display: none;" value="' . $name . '"></input>';  
-						echo '<input name="year" style="display: none;" value="' . $year . '"></input>'; 
+						echo '<input name="name" style="display: none;" value="' . $_POST['name'] . '"></input>';  
+						echo '<input name="year" style="display: none;" value="' . $_POST['year'] . '"></input>'; 
 						echo '<input name="SchoolSystem" style="display: none;" value="';
-						if (isset($schoolSystem)) 
-							echo $schoolSystem;
+						if (isset($_POST['SchoolSystem'])) 
+							echo $_POST['SchoolSystem'];
 						else
 							echo '';
 						echo '"></input>';
 						echo '<input name="CourseLevel" style="display: none;" value="';
-						if (isset($courseLevel))
-							echo $courseLevel;
+						if (isset($_POST['CourseLevel']))
+							echo $_POST['CourseLevel'];
 						else
 							echo '';	
 						echo '"></input>';
@@ -166,7 +163,7 @@
 						$result_updated = $conn->query($sql_updated);
 					}
 					if( $_POST["gradeA_" . $counter]!=$row['Grades_A'] ){ 
-						$sql_updated = "UPDATE `students` SET `Grades_A`='" . htmlspecialchars($_POST["gradeA_" . $counter]) . "' WHERE `Name`='" . $row["Name"] . "'";
+						$sql_updated = "UPDATE `students` SET `Grades_A`='" . $_POST["gradeA_" . $counter] . "' WHERE `Name`='" . $row["Name"] . "'";
 						$result_updated = $conn->query($sql_updated);
 					}
 					if ( $_POST["gradeB_" . $counter]!=$row['Grades_B'] ){ 
