@@ -79,7 +79,7 @@ function makeAroundGreen() {
 }
 
 //the functionality which makes the pictures rotate
-var images = new Array ('IA_photos/GermanFlag.jpg', 'IA_photos/SchoolPicture.jpg', 'IA_photos/Acropolis.jpg');
+var images = new Array ('IA_photos/GermanFlag.jpg', 'IA_photos/ClassroomPicture.jpg', 'IA_photos/Acropolis.jpg');
 var index = 1;
 
 function rotateImage()
