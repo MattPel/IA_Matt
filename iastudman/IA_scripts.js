@@ -188,6 +188,7 @@ $(function() {
 	$(form).on("submit",function(event) {
 		//stop the browser from submitting the form
 		event.preventDefault();
+		
 
 		//serialize the form data
 		var formData = $(form).serialize();
@@ -211,9 +212,8 @@ $(function() {
 				$('#mySlidebar').css('display', 'block');	
 			}
 		}).fail(function(response) {
-
-			$('#errorLoginArea').html(response);
-			
+			$('#errorLoginArea').css('display', 'block');
+			$('#errorLoginArea').html('Error during login: There was a network problem , please try again later!');
 		});
 	});
 });

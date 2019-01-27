@@ -35,7 +35,7 @@
 			}
 			//if there has been an error during login do the following
 			else{
-				echo "Error during login: An error has occured, please refresh the page to try again!";
+				echo "An error has occured, please refresh the page to try again!";
 			}
 			http_response_code(200);
 		}
@@ -45,7 +45,7 @@
 	}
 	else {
 		http_response_code(403);
-		echo "Error during login: There was a problem with your submission, please try again!";
+		echo "Error during login: There was a network problem , please try again later!";
 	}
 		
 ?>

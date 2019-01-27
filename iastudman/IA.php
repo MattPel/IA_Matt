@@ -68,7 +68,7 @@
 			
 			<!-- In this div will appear the possible error message of login -->
 			<div id="errorLoginArea" style="display:none; text-align: center; font-size: 130%; color: #980101; font-weight: bold;">
-			
+				hello
 			</div>
 			
 			<br>
