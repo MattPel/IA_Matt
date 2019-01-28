@@ -27,7 +27,7 @@ $("#name").on('input', function (evt) {
 	}
 	
 	//checks if input contains something else than letters and fullstop 
-	//in order to hide error message and try to enable search button
+	//in order to show error message and try to enable search button
 	if (/^([A-Za-z .]*)$/.test(value)) {
 		document.getElementById("error-message-nameID").style.display="none";
 		$("#name").removeClass('error');
@@ -108,7 +108,7 @@ $(document).ready(function()
   setInterval (rotateImage, 3000);
 });
 
-//when the user clicks on <div>, open the popup
+//when clicking on the <div>, open the popup
 function openPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");

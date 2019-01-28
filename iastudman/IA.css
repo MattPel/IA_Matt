@@ -18,14 +18,14 @@ body{
 	text-align: center;
 }
 
-/* Popup container */
+
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
+/* Styling the popup itself */
 .popup .popuptext {
   visibility: hidden;
   width: 320px;
@@ -40,7 +40,7 @@ body{
   margin-left: -80px;
 }
 
-/* Popup arrow */
+/* Styling the arrow below the popup */
 .popup .popuptext:after {
   content: "";
   position: absolute;
@@ -52,14 +52,14 @@ body{
   border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
+/* When clicking on the popup, this class is toggled */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
 }
 
-/* Add animation (fade in the popup) */
+/* The popup's fading animation */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
   to {opacity: 1;}
