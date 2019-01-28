@@ -26,8 +26,8 @@ $("#name").on('input', function (evt) {
 		return;
 	}
 	
-	//checks if input contains something else than letters and fullstop 
-	//in order to show error message and try to enable search button
+	//checks if input contains letters and fullstop 
+	//in order to hide error message and try to enable search button
 	if (/^([A-Za-z .]*)$/.test(value)) {
 		document.getElementById("error-message-nameID").style.display="none";
 		$("#name").removeClass('error');
@@ -181,15 +181,11 @@ $(function() {
 
 //AJAX call for the loginForm
 $(function() {
-	//get the form
 	var form = $('#loginForm');
 	
-	//set up a submit event listener for the form
 	$(form).on("submit",function(event) {
-		//stop the browser from submitting the form
 		event.preventDefault();
 		
-
 		//serialize the form data
 		var formData = $(form).serialize();
 		
@@ -357,12 +353,9 @@ function editClick(){
 	
 //AJAX call for addForm
 $(function() {
-	//tet the form.
 	var form = $('#addForm');
 	
-	//set up a submit event listener for the form
 	$(form).on("submit",function(event) {
-		//stop the browser from submitting the form
 		event.preventDefault();
 
 		if (checkAnyEmpty()){
