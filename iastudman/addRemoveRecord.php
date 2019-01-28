@@ -38,7 +38,8 @@
 				$result_inserted = $conn->query($sql_insert);
 				if($result_inserted) echo "<p style='text-align: center; font-size: 130%; color: #0d3800; font-weight: bold;'> 
 				Student '" . $_POST['name'] . "' successfully added! </p>";		
-				else echo "<p style='text-align: center; font-size: 130%; color: #980101; font-weight: bold;'> Something went wrong. Please try again. </p>";
+				else echo "<p style='text-align: center; font-size: 130%; color: #980101; font-weight: bold;'>
+				Something went wrong. Please try again. </p>";
 			}
 		}
 		mysqli_close($conn);

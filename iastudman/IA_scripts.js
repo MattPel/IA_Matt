@@ -26,7 +26,7 @@ $("#name").on('input', function (evt) {
 		return;
 	}
 	
-	//checks if input contains something else than letters and fullstop 
+	//checks if input contains letters and fullstop 
 	//in order to hide error message and try to enable search button
 	if (/^([A-Za-z .]*)$/.test(value)) {
 		document.getElementById("error-message-nameID").style.display="none";
@@ -108,7 +108,7 @@ $(document).ready(function()
   setInterval (rotateImage, 3000);
 });
 
-//when the user clicks on <div>, open the popup
+//when clicking on the <div>, open the popup
 function openPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
@@ -181,14 +181,11 @@ $(function() {
 
 //AJAX call for the loginForm
 $(function() {
-	//get the form
 	var form = $('#loginForm');
 	
-	//set up a submit event listener for the form
 	$(form).on("submit",function(event) {
-		//stop the browser from submitting the form
 		event.preventDefault();
-
+		
 		//serialize the form data
 		var formData = $(form).serialize();
 		
@@ -211,9 +208,8 @@ $(function() {
 				$('#mySlidebar').css('display', 'block');	
 			}
 		}).fail(function(response) {
-
-			$('#errorLoginArea').html(response);
-			
+			$('#errorLoginArea').css('display', 'block');
+			$('#errorLoginArea').html('Error during login: There was a network problem , please try again later!');
 		});
 	});
 });
@@ -357,12 +353,9 @@ function editClick(){
 	
 //AJAX call for addForm
 $(function() {
-	//tet the form.
 	var form = $('#addForm');
 	
-	//set up a submit event listener for the form
 	$(form).on("submit",function(event) {
-		//stop the browser from submitting the form
 		event.preventDefault();
 
 		if (checkAnyEmpty()){
