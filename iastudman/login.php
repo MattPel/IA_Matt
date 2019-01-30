@@ -1,10 +1,16 @@
 <?php
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "German_Class";
+		if ($_SERVER["HTTP_HOST"]==='localhost') {
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "German_Class";
+		} else {
+			$servername = "localhost";
+			$username = "pdxia";
+			$password = "DxtXVa2nWZKvcFKt";
+			$dbname = "pdx_ia_matt";
+		}
 		
 		//establish the connection with database and server credentials
 		$conn = new mysqli($servername, $username, $password, $dbname);
