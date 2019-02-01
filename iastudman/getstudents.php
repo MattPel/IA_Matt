@@ -148,11 +148,11 @@
 				}
 			}
 			else {
-				//what happens when (dynamically generated) editForm is submitted
+				//what happens when (dynamically generated) externalForm is submitted
 				$counter = 0;
 				while($row = $result->fetch_assoc()) { 
-					//either editForm or searchForm, results are gonna be displayed in the same order after the search query
-					//that's why counter variable now can match the correct changes that have been submitted to the dynamically generated editForm above
+					//either externalForm or searchForm, results are gonna be displayed in the same order after the search query
+					//that's why counter variable now can match the correct changes that have been submitted to the dynamically generated externalForm above
 					//counter variable here corresponds to the appropriate student records of counter variable at lines 90-115
 					$counter = $counter + 1;
 					

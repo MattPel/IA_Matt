@@ -545,10 +545,16 @@ function resetAdd(){
 	document.getElementById("insertCourseLevel").value="";
 	document.getElementById("hiddenOptionInsert").style.display="none";
 	document.getElementById("addRemoveArea").style.display="none";
+	document.getElementById("error-message-nameID2").style.display="none";
+	document.getElementById("error-message-yearID2").style.display="none";
+	$("#addButton").removeAttr("disabled", "disabled");
+
 }
 
 //resets the remove input
 function resetRemove(){
 	document.getElementById("removeName").value="";
 	document.getElementById("addRemoveArea").style.display="none";
+	document.getElementById("error-message-nameID3").style.display="none";
+	$("#removeButton").removeAttr("disabled", "disabled");	
 }
