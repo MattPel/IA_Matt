@@ -24,7 +24,7 @@
 		} 
 		//if there is no error during connection do the following
 		else{
-			$sql = "SELECT Username FROM credentials WHERE Username='" . $_POST['uname'] . "' AND Password='" . $_POST['psw'] . "'";
+			$sql = "SELECT Username FROM credentials WHERE Username='" . htmlspecialchars($_POST['uname']) . "' AND Password='" . htmlspecialchars($_POST['psw']) . "'";
 			
 			$result = $conn->query($sql);
 			
