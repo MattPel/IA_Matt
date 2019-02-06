@@ -9,7 +9,7 @@
 			$servername = "localhost";
 			$username = "pdxia";
 			$password = "DxtXVa2nWZKvcFKt";
-			$dbname = "pdx_ia_matt";
+			$dbname = "pdx_ia_studman";
 		}
 		
 		//establish the connection with database and server credentials
